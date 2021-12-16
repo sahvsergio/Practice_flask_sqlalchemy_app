@@ -1,15 +1,15 @@
-from flask import Flask
+from flask import Flask,render_template,url_for
 
 app=Flask(__name__)
 
 @app.route('/')
 
 def index():
-    return 'Hello from Sergio'
+    return render_template('index.html')
 
-@app.route('/contact')
-def contact():
-    return 'Please contact us'
+@app.route('/contact-us')
+def contact_us():
+    return render_template('contact-us.html')
 
 
 if __name__=='__main__':
